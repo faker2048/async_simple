@@ -68,3 +68,6 @@ if (ENABLE_SSL)
 else()
     target_link_libraries(smtp_client async_simple ${CMAKE_THREAD_LIBS_INIT})
 endif()
+
+add_executable(test_crash test_crash.cpp)
+target_link_libraries(test_crash async_simple)
